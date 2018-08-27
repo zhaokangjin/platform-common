@@ -1,4 +1,4 @@
-package platflat.common.configure;
+package com.platform.configure.connection;
 
 import java.io.Serializable;
 
