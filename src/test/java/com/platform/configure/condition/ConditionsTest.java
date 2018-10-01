@@ -1,8 +1,9 @@
 package com.platform.configure.condition;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
 
 class ConditionsTest {
 
