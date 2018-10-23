@@ -10,7 +10,7 @@ import java.util.List;
  * @param <C> Condition 调用参数
  * @param <I> in or not in 调用参数(in 子查询，可能是字符串，日期，数字等)
  */
-public interface BaseService<R, C, I> {
+public interface BaseService<R, C> {
 
 	public long countByExample();
 
@@ -32,9 +32,9 @@ public interface BaseService<R, C, I> {
 
 	public int bathcDeleteUpdateOrInsertByExample(List<R> record, C conditon);
 
-	public List<R> selectRecordsByInList(String fieldName, List<I> paramList, Integer splitSize);
+	public List<R> selectRecordsByInList(String fieldName, List<Object> paramList, Integer splitSize);
 
-	public List<R> selectRecordsByNotInList(String fieldName, List<I> paramList);
+	public List<R> selectRecordsByNotInList(String fieldName, List<Object> paramList);
 	
 	public List<R> selectRecordsByExists(C condition,String subTableName);
 }
