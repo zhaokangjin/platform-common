@@ -18,7 +18,8 @@ public class BaseEntity implements Serializable{
 	private Date lastUpdatedDate;
 	private String createdBy;
 	private String lastUpdatedBy;
-	private boolean deletedFlag;
+	//用于标记当前记录的删除类型，D表示硬删除是物理删除；软删除是指删除标记为Y的；非软删除是指删除标记为N的；
+	private DeletedType deletedType;
 	public Date getCreatedDate() {
 		return createdDate;
 	}
@@ -43,11 +44,10 @@ public class BaseEntity implements Serializable{
 	public void setLastUpdatedBy(String lastUpdatedBy) {
 		this.lastUpdatedBy = lastUpdatedBy;
 	}
-	public boolean isDeletedFlag() {
-		return deletedFlag;
+	public DeletedType getDeletedType() {
+		return deletedType;
 	}
-	public void setDeletedFlag(boolean deletedFlag) {
-		this.deletedFlag = deletedFlag;
+	public void setDeletedType(DeletedType deletedType) {
+		this.deletedType = deletedType;
 	}
-	
 }
