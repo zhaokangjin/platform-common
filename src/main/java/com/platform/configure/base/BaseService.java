@@ -34,7 +34,7 @@ public interface BaseService<R, C> {
 
 	public List<R> selectRecordsByInList(String fieldName, List<Object> paramList, Integer splitSize);
 
-	public List<R> selectRecordsByNotInList(String fieldName, List<Object> paramList);
+	public List<R> selectRecordsByNotInList(String fieldName, List<Object> paramList, Integer splitSize);
 	
 	public List<R> selectRecordsByExists(C condition,String subTableName);
 }
