@@ -12,29 +12,27 @@ import java.util.List;
  */
 public interface BaseService<R, C> {
 
-	public long countByExample();
+	public StatusResult<Long> countByExample();
 
-	public int deleteByExample();
+	public StatusResult<Integer> deleteByExample();
 
-	public int insert(R record);
+	public StatusResult<Integer> insert(R record);
 
-	public int insertSelective(R record);
+	public StatusResult<Integer> insertSelective(R record);
 	
-	public List<R> selectByExample(C condition);
+	public StatusResult<List<R>> selectByExample(C condition);
 	//支持分页
-	public List<R> selectByExample();
+	public StatusResult<List<R>> selectByExample();
 
-	public int updateByExampleSelective(R record);
+	public StatusResult<Integer> updateByExampleSelective(R record);
 
-	public int updateByExample(R record);
+	public StatusResult<Integer> updateByExample(R record);
 
-	public int bathcDeleteUpdateOrInsertByExample(R record, C conditon);
+	public StatusResult<Integer> bathcDeleteUpdateOrInsertByExample(List<R> record, C conditon);
 
-	public int bathcDeleteUpdateOrInsertByExample(List<R> record, C conditon);
+	public StatusResult<List<R>> selectRecordsByInList(String fieldName, List<Object> paramList, Integer splitSize);
 
-	public List<R> selectRecordsByInList(String fieldName, List<Object> paramList, Integer splitSize);
-
-	public List<R> selectRecordsByNotInList(String fieldName, List<Object> paramList, Integer splitSize);
+	public StatusResult<List<R>> selectRecordsByNotInList(String fieldName, List<Object> paramList, Integer splitSize);
 	
-	public List<R> selectRecordsByExists(C condition,String subTableName);
+	public StatusResult<List<R>> selectRecordsByExists(C condition,String subTableName);
 }
