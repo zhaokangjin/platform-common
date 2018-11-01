@@ -16,7 +16,7 @@ public class JoinUtils {
 	}
 	public static String join(String arr,String split,String joinChar) {
 		StringBuilder sb=new StringBuilder();
-		String[] arrs=arr.split(split);
+		String[] arrs=arr.split("\\"+split);
 		for(int i=0;i<arrs.length;i++) {
 			if(i==arrs.length-1) {
 				sb.append(arrs[i]);
