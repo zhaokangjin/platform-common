@@ -2,24 +2,15 @@ package com.platform.configure.condition;
 
 import java.util.List;
 
-public class NotInCondition extends BaseCondition {
+public class NotInCondition<T> extends BaseCondition {
 	private static final long serialVersionUID = -3054071490730706587L;
-	private String fieldName;
-	private List<Object> value;
+	private List<T> value;
 
-	public String getFieldName() {
-		return fieldName;
-	}
-
-	public void setFieldName(String fieldName) {
-		this.fieldName = fieldName;
-	}
-
-	public List<Object> getValue() {
+	public List<T> getValue() {
 		return value;
 	}
 
-	public void setValue(List<Object> value) {
+	public void setValue(List<T> value) {
 		this.value = value;
 	}
 }

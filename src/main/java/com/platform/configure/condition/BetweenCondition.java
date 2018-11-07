@@ -1,32 +1,24 @@
 package com.platform.configure.condition;
 
-public class BetweenCondition extends BaseCondition{
+public class BetweenCondition<T> extends BaseCondition{
 	private static final long serialVersionUID = -4249653188402445007L;
-	private String fieldName;
-	private Object preValue;
-	private Object endValue;
+	private T preValue;
+	private T endValue;
 
-	public String getFieldName() {
-		return fieldName;
-	}
 
-	public void setFieldName(String fieldName) {
-		this.fieldName = fieldName;
-	}
-
-	public Object getPreValue() {
+	public T getPreValue() {
 		return preValue;
 	}
 
-	public void setPreValue(Object preValue) {
+	public void setPreValue(T preValue) {
 		this.preValue = preValue;
 	}
 
-	public Object getEndValue() {
+	public T getEndValue() {
 		return endValue;
 	}
 
-	public void setEndValue(Object endValue) {
+	public void setEndValue(T endValue) {
 		this.endValue = endValue;
 	}
 }
