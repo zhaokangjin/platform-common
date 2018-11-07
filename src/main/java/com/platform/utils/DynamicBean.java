@@ -2,10 +2,16 @@ package com.platform.utils;
 
 import java.util.Map;
 
+import com.alibaba.fastjson.JSON;
+import com.platform.configure.result.CustomException;
+import com.platform.configure.result.MsgLevel;
+import com.platform.configure.result.Status;
+
 import net.sf.cglib.beans.BeanGenerator;
 import net.sf.cglib.beans.BeanMap;
 
 public class DynamicBean {
+
 	private Object target;
 
 	private BeanMap beanMap;
@@ -14,6 +20,7 @@ public class DynamicBean {
 		this.target = generateBean(superclass, propertyMap);
 		this.beanMap = BeanMap.create(this.target);
 	}
+
 	public void setValue(String property, Object value) {
 		beanMap.put(property, value);
 	}
