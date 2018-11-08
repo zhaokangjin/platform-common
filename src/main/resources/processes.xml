@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<processes>
+	<process code="PRO_001001" i18n="china.city"></process>
+	<process code="PRO_001002" i18n="china.help"></process>
+</processes>

@@ -3,6 +3,8 @@ package com.platform.configure.base;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.platform.configure.base.enums.DeletedType;
+
 
 /**
  * 实体 基类 用于审计字段

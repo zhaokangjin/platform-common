@@ -2,6 +2,8 @@ package com.platform.configure.result;
 
 import java.io.Serializable;
 
+import com.platform.configure.base.enums.Status;
+
 public class ResultStatus<T> implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private T reuslt;

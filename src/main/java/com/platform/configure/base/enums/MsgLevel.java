@@ -1,4 +1,4 @@
-package com.platform.configure.result;
+package com.platform.configure.base.enums;
 
 public enum MsgLevel {
 	ERROR("error"), INFO("info"), WARN("warn");

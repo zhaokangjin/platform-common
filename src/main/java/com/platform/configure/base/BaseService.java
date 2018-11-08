@@ -12,33 +12,33 @@ import com.platform.configure.base.annotation.LockRisk;
  */
 public interface BaseService<R, C> {
 
-	public StatusResult<Long> countByExample();
+	public ResultStatus<Long> countByExample();
 	
 	@LockRisk
-	public StatusResult<Integer> deleteByExample();
+	public ResultStatus<Integer> deleteByExample();
 
 	@LockRisk
-	public StatusResult<Integer> insert(R record);
+	public ResultStatus<Integer> insert(R record);
 
 	@LockRisk
-	public StatusResult<Integer> insertSelective(R record);
+	public ResultStatus<Integer> insertSelective(R record);
 	
-	public StatusResult<List<R>> selectByExample(C condition);
+	public ResultStatus<List<R>> selectByExample(C condition);
 	//支持分页
-	public StatusResult<List<R>> selectByExample();
+	public ResultStatus<List<R>> selectByExample();
 
 	@LockRisk
-	public StatusResult<Integer> updateByExampleSelective(R record);
+	public ResultStatus<Integer> updateByExampleSelective(R record);
 
 	@LockRisk
-	public StatusResult<Integer> updateByExample(R record);
+	public ResultStatus<Integer> updateByExample(R record);
 
 	@LockRisk
-	public StatusResult<Integer> bathcDeleteUpdateOrInsertByExample(List<R> record, C conditon);
+	public ResultStatus<Integer> bathcDeleteUpdateOrInsertByExample(List<R> record, C conditon);
 
-	public StatusResult<List<R>> selectRecordsByInList(String fieldName, List<Object> paramListIn, Integer splitSize,C conditon);
+	public ResultStatus<List<R>> selectRecordsByInList(String fieldName, List<Object> paramListIn, Integer splitSize,C conditon);
 
-	public StatusResult<List<R>> selectRecordsByNotInList(String fieldName, List<Object> paramListNotIn, Integer splitSize,C conditon);
+	public ResultStatus<List<R>> selectRecordsByNotInList(String fieldName, List<Object> paramListNotIn, Integer splitSize,C conditon);
 	
-	public StatusResult<List<R>> selectRecordsByExists(C condition,String subTableName);
+	public ResultStatus<List<R>> selectRecordsByExists(C condition,String subTableName);
 }
