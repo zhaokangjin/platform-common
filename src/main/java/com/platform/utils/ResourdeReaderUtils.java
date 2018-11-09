@@ -10,7 +10,7 @@ import org.springframework.core.io.Resource;
 import com.platform.configure.result.CustomException;
 import com.thoughtworks.xstream.XStream;
 
-public class ResourdeReader {
+public class ResourdeReaderUtils {
 
 	public static void fileReader(String fileName) throws CustomException {
 		Resource resource = new ClassPathResource("exception.xml");

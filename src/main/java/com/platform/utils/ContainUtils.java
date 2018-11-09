@@ -2,10 +2,14 @@ package com.platform.utils;
 
 import java.util.List;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
 import com.platform.configure.base.enums.MsgLevel;
 import com.platform.configure.base.enums.Status;
 import com.platform.configure.result.CustomException;
-
+@Component  
+@ConfigurationProperties(prefix="system") 
 public class ContainUtils {
 	public static boolean isContains(String content,String subStr) throws CustomException{
 		if(null!=content) {
