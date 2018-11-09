@@ -3,6 +3,7 @@ package com.platform.configure.base;
 import java.util.List;
 
 import com.platform.configure.base.annotation.LockRisk;
+import com.platform.configure.result.ResultStatus;
 
 /**
  * 
