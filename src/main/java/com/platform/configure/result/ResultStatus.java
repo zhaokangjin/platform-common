@@ -9,6 +9,9 @@ public class ResultStatus<T> implements Serializable {
 	private T reuslt;
 	private int status;
 
+	public ResultStatus() {
+	}
+
 	public ResultStatus(T reuslt, Status status) {
 		this.reuslt = reuslt;
 		this.status = status.getStatus();

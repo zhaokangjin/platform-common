@@ -7,6 +7,8 @@ import java.lang.reflect.Modifier;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
@@ -343,5 +345,13 @@ public class ReflectUtils {
 			// 把异常吞掉直接返回null
 		}
 		return result;
+	}
+
+	public static Type getGenricType(Type  type) {
+		
+		if(type instanceof ParameterizedType){
+			return ((ParameterizedType)(type)).getActualTypeArguments()[0];
+		}
+		return null;
 	}
 }

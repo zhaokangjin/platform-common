@@ -1,12 +1,14 @@
 package com.platform.configure.result;
 
+import java.io.Serializable;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.platform.configure.base.enums.MsgLevel;
 import com.platform.configure.base.enums.Status;
 
-public class CustomException extends Throwable{
+public class CustomException extends Throwable implements Serializable{
 	private Logger logger=LoggerFactory.getLogger(this.getClass());
 	private static final long serialVersionUID = 1L;
 	private String errorCode;
