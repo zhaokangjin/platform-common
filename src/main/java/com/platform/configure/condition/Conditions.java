@@ -1,20 +1,21 @@
 package com.platform.configure.condition;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 /*以下命名尽可能遵守ONGL表达式命名法则*/
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Conditions<T> extends BaseCondition {
+public class Conditions<T> extends BaseCondition implements Serializable{
 	private static final long serialVersionUID = -4137598697029736184L;
 	//in 
 	private List<T> in;
 	//not in
 	private List<T> nin;
-	//like
-	private T lk;
 	//between
 	private Between<T> bw;
+	//like
+	private T lk;
 	//==
 	private T eq;
 	//!=
