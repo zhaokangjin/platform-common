@@ -4,6 +4,11 @@ public class Between<T> extends BaseCondition{
 	private static final long serialVersionUID = -4249653188402445007L;
 	private T preValue;
 	private T endValue;
+	
+	public Between(T preValue,T endValue) {
+		this.preValue = preValue;
+		this.endValue = endValue;
+	}
 	public T getPreValue() {
 		return preValue;
 	}

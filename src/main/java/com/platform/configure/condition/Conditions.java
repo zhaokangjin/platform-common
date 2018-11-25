@@ -3,95 +3,131 @@ package com.platform.configure.condition;
 import java.io.Serializable;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 /*以下命名尽可能遵守ONGL表达式命名法则*/
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class Conditions<T> extends BaseCondition implements Serializable{
+//@JsonIgnoreProperties(ignoreUnknown = true)
+public class Conditions<T> extends BaseCondition implements Serializable {
 	private static final long serialVersionUID = -4137598697029736184L;
-	//in 
+
+	private String all;
+	private T greaterThan;
+	private Between<T> between;
+	private T equalTo;
+	private T greaterThanOrEqualTo;
 	private List<T> in;
-	//not in
-	private List<T> nin;
-	//between
-	private Between<T> bw;
-	//like
-	private T lk;
-	//==
-	private T eq;
-	//!=
-	private T neq;
-	//>
-	private T gt;
-	//>=
-	private T gte;
-	//< 
-	private T lt;
-	//<=
-	private T lte;
+	private T isNotNull;
+	private T isNull;
+	private T lessThan;
+	private T lessThanOrEqualTo;
+	private Between<T> notBetween;
+	private T notEqualTo;
+	private List<T> notIn;
+
+	public String getAll() {
+		return all;
+	}
+
+	public void setAll(String all) {
+		this.all = all;
+	}
+
+	public T getGreaterThan() {
+		return greaterThan;
+	}
+
+	public void setGreaterThan(T greaterThan) {
+		this.greaterThan = greaterThan;
+	}
+
+	public Between<T> getBetween() {
+		return between;
+	}
+
+	public void setBetween(Between<T> between) {
+		this.between = between;
+	}
+
+	public T getEqualTo() {
+		return equalTo;
+	}
+
+	public void setEqualTo(T equalTo) {
+		this.equalTo = equalTo;
+	}
+
+	public T getGreaterThanOrEqualTo() {
+		return greaterThanOrEqualTo;
+	}
+
+	public void setGreaterThanOrEqualTo(T greaterThanOrEqualTo) {
+		this.greaterThanOrEqualTo = greaterThanOrEqualTo;
+	}
+
 	public List<T> getIn() {
 		return in;
 	}
+
 	public void setIn(List<T> in) {
 		this.in = in;
 	}
-	public List<T> getNin() {
-		return nin;
-	}
-	public void setNin(List<T> nin) {
-		this.nin = nin;
-	}
-	public T getLk() {
-		return lk;
-	}
-	public void setLk(T lk) {
-		this.lk = lk;
-	}
-	public Between<T> getBw() {
-		return bw;
-	}
-	public void setBw(Between<T> bw) {
-		this.bw = bw;
-	}
-	public T getEq() {
-		return eq;
-	}
-	public void setEq(T eq) {
-		this.eq = eq;
-	}
-	public T getNeq() {
-		return neq;
-	}
-	public void setNeq(T neq) {
-		this.neq = neq;
-	}
-	public T getGt() {
-		return gt;
-	}
-	public void setGt(T gt) {
-		this.gt = gt;
-	}
-	public T getGte() {
-		return gte;
-	}
-	public void setGte(T gte) {
-		this.gte = gte;
-	}
-	public T getLt() {
-		return lt;
-	}
-	public void setLt(T lt) {
-		this.lt = lt;
-	}
-	public T getLte() {
-		return lte;
-	}
-	public void setLte(T lte) {
-		this.lte = lte;
-	}
-	@Override
-	public String toString() {
-		return "Conditions [in=" + in + ", nin=" + nin + ", lk=" + lk + ", bw=" + bw + ", eq=" + eq + ", neq=" + neq
-				+ ", gt=" + gt + ", gte=" + gte + ", lt=" + lt + ", lte=" + lte + "]";
+
+	public T getIsNotNull() {
+		return isNotNull;
 	}
 
+	public void setIsNotNull(T isNotNull) {
+		this.isNotNull = isNotNull;
+	}
+
+	public T getIsNull() {
+		return isNull;
+	}
+
+	public void setIsNull(T isNull) {
+		this.isNull = isNull;
+	}
+
+	public T getLessThan() {
+		return lessThan;
+	}
+
+	public void setLessThan(T lessThan) {
+		this.lessThan = lessThan;
+	}
+
+	public T getLessThanOrEqualTo() {
+		return lessThanOrEqualTo;
+	}
+
+	public void setLessThanOrEqualTo(T lessThanOrEqualTo) {
+		this.lessThanOrEqualTo = lessThanOrEqualTo;
+	}
+
+	public Between<T> getNotBetween() {
+		return notBetween;
+	}
+
+	public void setNotBetween(Between<T> notBetween) {
+		this.notBetween = notBetween;
+	}
+
+	public T getNotEqualTo() {
+		return notEqualTo;
+	}
+
+	public void setNotEqualTo(T notEqualTo) {
+		this.notEqualTo = notEqualTo;
+	}
+
+	public List<T> getNotIn() {
+		return notIn;
+	}
+
+	public void setNotIn(List<T> notIn) {
+		this.notIn = notIn;
+	}
+
+	@Override
+	public String toString() {
+		return "Conditions [all=" + all + ", greaterThan=" + greaterThan + ", between=" + between + ", equalTo=" + equalTo + ", greaterThanOrEqualTo=" + greaterThanOrEqualTo + ", in=" + in + ", isNotNull=" + isNotNull + ", isNull=" + isNull + ", lessThan=" + lessThan + ", lessThanOrEqualTo=" + lessThanOrEqualTo + ", notBetween=" + notBetween + ", notEqualTo=" + notEqualTo + ", notIn=" + notIn + "]";
+	}
 }
