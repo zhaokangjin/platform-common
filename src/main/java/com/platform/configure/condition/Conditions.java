@@ -1,12 +1,9 @@
 package com.platform.configure.condition;
 
-import java.io.Serializable;
 import java.util.List;
 
 /*以下命名尽可能遵守ONGL表达式命名法则*/
-//@JsonIgnoreProperties(ignoreUnknown = true)
-public class Conditions<T> extends BaseCondition implements Serializable {
-	private static final long serialVersionUID = -4137598697029736184L;
+public class Conditions<T>{
 
 	private String all;
 	private T greaterThan;
@@ -124,10 +121,5 @@ public class Conditions<T> extends BaseCondition implements Serializable {
 
 	public void setNotIn(List<T> notIn) {
 		this.notIn = notIn;
-	}
-
-	@Override
-	public String toString() {
-		return "Conditions [all=" + all + ", greaterThan=" + greaterThan + ", between=" + between + ", equalTo=" + equalTo + ", greaterThanOrEqualTo=" + greaterThanOrEqualTo + ", in=" + in + ", isNotNull=" + isNotNull + ", isNull=" + isNull + ", lessThan=" + lessThan + ", lessThanOrEqualTo=" + lessThanOrEqualTo + ", notBetween=" + notBetween + ", notEqualTo=" + notEqualTo + ", notIn=" + notIn + "]";
 	}
 }

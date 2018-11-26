@@ -1,7 +1,6 @@
 package com.platform.configure.condition;
 
-public class Between<T> extends BaseCondition{
-	private static final long serialVersionUID = -4249653188402445007L;
+public class Between<T>{
 	private T preValue;
 	private T endValue;
 	
@@ -21,5 +20,4 @@ public class Between<T> extends BaseCondition{
 	public void setEndValue(T endValue) {
 		this.endValue = endValue;
 	}
-	
 }
